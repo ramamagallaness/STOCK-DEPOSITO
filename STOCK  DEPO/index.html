@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BENTAHOME — Control de Stock</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-name">OIO-<span>STOCK</span></div>
+    <div class="brand-line"></div>
+    <div class="brand-tagline">Sistema de gestión de inventario</div>
+    <div class="header-sub">Depósito + Picking — Control de stock en tiempo real</div>
+  </div>
+</header>
+
+<!-- ── CONTENIDO ── -->
+<div class="page-content">
+
+  <!-- Panel movimiento -->
+  <div class="panel">
+    <div class="section-label">Registrar movimiento</div>
+    <div class="fila-accion">
+      <div class="campo campo-producto">
+  <label>Buscar producto</label>
+  <input 
+    type="text" 
+    id="buscador-movimiento" 
+    placeholder="Buscar por SKU, nombre o posición..."
+    oninput="filtrarSelectMovimiento()"
+  >
+
+  <label>Producto (SKU)</label>
+  <select id="sel-sku">
+    <option value="">— Seleccioná un SKU —</option>
+  </select>
+</div>
+      <div class="campo">
+        <label>Ubicación</label>
+        <div class="radio-group" style="height:42px;">
+          <label><input type="radio" name="lugar" value="deposito" checked> Depósito</label>
+          <label><input type="radio" name="lugar" value="picking"> Picking</label>
+        </div>
+      </div>
+      <div class="campo">
+        <label>Cantidad</label>
+        <input type="number" id="cant-input" value="1" min="1">
+      </div>
+      <button class="btn-mas" onclick="mover(1)">+ Ingreso</button>
+      <button class="btn-menos" onclick="mover(-1)">− Egreso</button>
+    </div>
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <!-- Tabla stock -->
+  <div class="tabla-wrap">
+    <div class="tabla-header">
+      <div class="section-label" style="margin:0;">Stock actual</div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <input type="text" id="buscador" placeholder="Buscar SKU..." oninput="filtrar()">
+
+  <button class="btn-alerta" onclick="verStockBajo()">Stock bajo</button>
+  <button class="btn-limpiar" onclick="verTodos()">Ver todos</button>
+
+  <button class="btn-nuevo" onclick="abrirModalNuevo()">+ Nuevo producto</button>
+</div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>SKU</th>
+          <th>Rack</th>
+          <th>Posición</th>
+          <th>Depósito</th>
+          <th>Picking</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <!-- Movimientos -->
+  <div class="mov-wrap">
+    <div class="section-label">Últimos movimientos</div>
+    <div id="lista-mov"><span class="sin-mov">Sin movimientos aún.</span></div>
+  </div>
+
+</div>
+
+<!-- Modal editar ubicación -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <h3>Editar ubicación</h3>
+    <div class="sku-modal" id="modal-sku-label"></div>
+    <div class="modal-campo">
+      <label>Rack</label>
+      <input type="text" id="modal-rack" placeholder="Ej: A">
+    </div>
+    <div class="modal-campo">
+      <label>Posición</label>
+      <input type="text" id="modal-pos" placeholder="Ej: 12">
+    </div>
+    <div class="modal-botones">
+      <button class="btn-cancelar" onclick="cerrarModal()">Cancelar</button>
+      <button class="btn-guardar-modal" onclick="guardarUbicacion()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal nuevo producto -->
+<div class="modal-overlay" id="modal-nuevo-overlay">
+  <div class="modal">
+    <h3>Nuevo producto</h3>
+    <p style="font-size:13px;color:#7A7469;margin-bottom:20px;">Completá los datos del nuevo SKU</p>
+
+    <div class="modal-campo">
+      <label>SKU *</label>
+      <input type="text" id="nuevo-sku" placeholder="EJ: SUPER-HELICOPTERO-BLACK">
+    </div>
+
+    <div class="modal-fila">
+      <div class="modal-campo">
+        <label>Rack</label>
+        <input type="text" id="nuevo-rack" placeholder="Ej: A">
+      </div>
+      <div class="modal-campo">
+        <label>Posición</label>
+        <input type="text" id="nuevo-pos" placeholder="Ej: 12">
+      </div>
+    </div>
+
+    <hr class="modal-divider">
+
+    <div class="modal-fila">
+      <div class="modal-campo">
+        <label>Stock Depósito</label>
+        <input type="number" id="nuevo-deposito" placeholder="0" min="0" value="0">
+      </div>
+      <div class="modal-campo">
+        <label>Stock Picking</label>
+        <input type="number" id="nuevo-picking" placeholder="0" min="0" value="0">
+      </div>
+    </div>
+
+    <div class="msg" id="msg-nuevo"></div>
+
+    <div class="modal-botones">
+      <button class="btn-cancelar" onclick="cerrarModalNuevo()">Cancelar</button>
+      <button class="btn-guardar-modal" onclick="guardarNuevoProducto()">Guardar producto</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
