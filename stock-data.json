@@ -1,0 +1,2054 @@
+{
+  "productos": [
+    {
+      "sku": "BATIDORA-TURBO-220V",
+      "nombre": "",
+      "rack": "C",
+      "pos": "12",
+      "deposito": 59,
+      "picking": 4
+    },
+    {
+      "sku": "BOMBA-ELECTRICA-DISP",
+      "nombre": "",
+      "rack": "A",
+      "pos": "6",
+      "deposito": 129,
+      "picking": 3
+    },
+    {
+      "sku": "TAZA-AUTOMATICA-BROWN",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "TAZA-AUTOMATICA-GREY",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "MESA-RATONA-WHITE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "13-14-15-16",
+      "deposito": 48,
+      "picking": 0
+    },
+    {
+      "sku": "MESA-RATONA-BROWN",
+      "nombre": "",
+      "rack": "C",
+      "pos": "8",
+      "deposito": 4,
+      "picking": 0
+    },
+    {
+      "sku": "MESA-RATONA-MARBLE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "10",
+      "deposito": 6,
+      "picking": 0
+    },
+    {
+      "sku": "BOTELLA-AGUA-PINK",
+      "nombre": "",
+      "rack": "B",
+      "pos": "12",
+      "deposito": 60,
+      "picking": 4
+    },
+    {
+      "sku": "BOTELLA-AGUA-YELLOW",
+      "nombre": "",
+      "rack": "B",
+      "pos": "12",
+      "deposito": 63,
+      "picking": 2
+    },
+    {
+      "sku": "BOT-WATER-FOOD-PINK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 40,
+      "picking": 4
+    },
+    {
+      "sku": "BOT-WATER-FOOD-YELLOW",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 40,
+      "picking": 4
+    },
+    {
+      "sku": "ESTANTE-SECRET-WOOD",
+      "nombre": "",
+      "rack": "C",
+      "pos": "17",
+      "deposito": 60,
+      "picking": 3
+    },
+    {
+      "sku": "ESTANTE-SECRET-BLACK",
+      "nombre": "",
+      "rack": "C",
+      "pos": "17",
+      "deposito": 55,
+      "picking": 4
+    },
+    {
+      "sku": "ESTANTE-SECRET-WHITE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "17",
+      "deposito": 64,
+      "picking": 4
+    },
+    {
+      "sku": "ESTATUA-PORTALLAVES-BLACK",
+      "nombre": "",
+      "rack": "B",
+      "pos": "2",
+      "deposito": 36,
+      "picking": 11
+    },
+    {
+      "sku": "ESTATUA-PORTALLAVES-WHITE",
+      "nombre": "",
+      "rack": "B",
+      "pos": "2",
+      "deposito": 36,
+      "picking": 11
+    },
+    {
+      "sku": "CALENTADOR-PLATOS-220V",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7-8",
+      "deposito": 36,
+      "picking": 5
+    },
+    {
+      "sku": "TUPPER-HERMETICO-TRANSP",
+      "nombre": "",
+      "rack": "B",
+      "pos": "12",
+      "deposito": 114,
+      "picking": 5
+    },
+    {
+      "sku": "PELADOR-VERDURA-GREEN",
+      "nombre": "",
+      "rack": "B",
+      "pos": "7",
+      "deposito": 140,
+      "picking": 13
+    },
+    {
+      "sku": "PELADOR-VERDURA-ORANGE",
+      "nombre": "",
+      "rack": "B",
+      "pos": "7",
+      "deposito": 140,
+      "picking": 18
+    },
+    {
+      "sku": "TAPA-SOPORT-BLACK",
+      "nombre": "",
+      "rack": "B",
+      "pos": "12",
+      "deposito": 200,
+      "picking": 49
+    },
+    {
+      "sku": "ALF-MARMOL-SIMPLE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "6",
+      "deposito": 298,
+      "picking": 0
+    },
+    {
+      "sku": "ALF-MARMOL-BATH",
+      "nombre": "",
+      "rack": "C",
+      "pos": "6",
+      "deposito": 299,
+      "picking": 0
+    },
+    {
+      "sku": "SET-SALERO- PIMENTERO- BLACK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 88,
+      "picking": 4
+    },
+    {
+      "sku": "SET-SALERO- PIMENTERO- WHITE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 92,
+      "picking": 5
+    },
+    {
+      "sku": "SET-SALERO- PIMENTERO- RED",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 91,
+      "picking": 5
+    },
+    {
+      "sku": "SET-SALERO- PIMENTERO- SILVER",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 90,
+      "picking": 5
+    },
+    {
+      "sku": "ORG-HAT-BLACK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "10",
+      "deposito": 90,
+      "picking": 23
+    },
+    {
+      "sku": "ORG-CABLES-WHITE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "23",
+      "deposito": 450,
+      "picking": 49
+    },
+    {
+      "sku": "ALF-MARMOL-CUADR",
+      "nombre": "",
+      "rack": "A",
+      "pos": "10",
+      "deposito": 200,
+      "picking": 99
+    },
+    {
+      "sku": "MINI-TACHO-BASURA-ROJO",
+      "nombre": "",
+      "rack": "B",
+      "pos": "1",
+      "deposito": 4,
+      "picking": 5
+    },
+    {
+      "sku": "MINI-TACHO-BASURA-VERDE",
+      "nombre": "",
+      "rack": "B",
+      "pos": "1",
+      "deposito": 4,
+      "picking": 1
+    },
+    {
+      "sku": "MESA-PLEGABLE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "27",
+      "deposito": 120,
+      "picking": 11
+    },
+    {
+      "sku": "TAZA-AUT-BLACK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 115,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-AUT-BLUE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7-8",
+      "deposito": 115,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-AUT-DARKGREEN",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7-8",
+      "deposito": 115,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-AUT-RED",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7-8",
+      "deposito": 99,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-DOBLE-VIDRIO",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 247,
+      "picking": 6
+    },
+    {
+      "sku": "PINZA-AMP-COLOR",
+      "nombre": "",
+      "rack": "A",
+      "pos": "4",
+      "deposito": 40,
+      "picking": 5
+    },
+    {
+      "sku": "AFILADOR-BLACK",
+      "nombre": "",
+      "rack": "B",
+      "pos": "2",
+      "deposito": 180,
+      "picking": 59
+    },
+    {
+      "sku": "GUANTES ANTICORTES-GREY-M",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 100,
+      "picking": 20
+    },
+    {
+      "sku": "GUANTES ANTICORTES-GREY-L",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 99,
+      "picking": 20
+    },
+    {
+      "sku": "ESPANT-INSECTOS",
+      "nombre": "",
+      "rack": "B",
+      "pos": "2",
+      "deposito": 167,
+      "picking": 62
+    },
+    {
+      "sku": "CEP-PARRILLA",
+      "nombre": "",
+      "rack": "A",
+      "pos": "23",
+      "deposito": 200,
+      "picking": 45
+    },
+    {
+      "sku": "BOLSA-DORMIR",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 45,
+      "picking": 20
+    },
+    {
+      "sku": "MANTA-(DARKGREY)-180*200",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 25,
+      "picking": 0
+    },
+    {
+      "sku": "MANTA-(LILA)-180*200",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 37,
+      "picking": 0
+    },
+    {
+      "sku": "MANTA-(WHITE)-180*200",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 35,
+      "picking": 0
+    },
+    {
+      "sku": "MANTA-(DARKGREY)-120*200",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 35,
+      "picking": 0
+    },
+    {
+      "sku": "MANTA-(LILA)-120*200",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 39,
+      "picking": 0
+    },
+    {
+      "sku": "MANTA-(WHITE)-120*200",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 35,
+      "picking": 0
+    },
+    {
+      "sku": "CEPILLO-ELECTRIC-PURPLE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "23",
+      "deposito": 109,
+      "picking": 10
+    },
+    {
+      "sku": "CEPILLO-ELECTRIC-WHITE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "23",
+      "deposito": 110,
+      "picking": 10
+    },
+    {
+      "sku": "ESPECIERO-OCULT",
+      "nombre": "",
+      "rack": "B",
+      "pos": "12",
+      "deposito": 192,
+      "picking": 29
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-WHITE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 30,
+      "picking": 4
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-BLACK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 13,
+      "picking": 1
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-RED",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 29,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-BLUE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 25,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-GREEN",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 30,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-PURPLE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 30,
+      "picking": 5
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-PINK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "26",
+      "deposito": 30,
+      "picking": 5
+    },
+    {
+      "sku": "PAVA-SILBATO-SILVER",
+      "nombre": "",
+      "rack": "A",
+      "pos": "23",
+      "deposito": 156,
+      "picking": 7
+    },
+    {
+      "sku": "ESCUR-PLATOS-WHITE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "10",
+      "deposito": 20,
+      "picking": 4
+    },
+    {
+      "sku": "CESTA-ROPA-X3",
+      "nombre": "",
+      "rack": "B",
+      "pos": "10",
+      "deposito": 219,
+      "picking": 19
+    },
+    {
+      "sku": "ESTANT-ALMACENAMIENTO",
+      "nombre": "",
+      "rack": "A, C",
+      "pos": "-",
+      "deposito": 148,
+      "picking": 1
+    },
+    {
+      "sku": "ESTANT-ALMACENAMIENTO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "ESTANT-ALM-BLACK",
+      "nombre": "",
+      "rack": "C",
+      "pos": "3-4",
+      "deposito": 14,
+      "picking": 0
+    },
+    {
+      "sku": "COCHE-BEBÉ-(DARKGREY)",
+      "nombre": "",
+      "rack": "C",
+      "pos": "21",
+      "deposito": 8,
+      "picking": 0
+    },
+    {
+      "sku": "COCHE-BEBÉ-(LIGHTGREY)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "8",
+      "deposito": 8,
+      "picking": 0
+    },
+    {
+      "sku": "COCHE-BEBÉ-(KHAKI)",
+      "nombre": "",
+      "rack": "C",
+      "pos": "24",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "COCHE-BEBÉ-(WHITE)",
+      "nombre": "",
+      "rack": "C",
+      "pos": "19",
+      "deposito": 7,
+      "picking": 0
+    },
+    {
+      "sku": "CUBETERA-PANAL-(PINK)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 17
+    },
+    {
+      "sku": "CUBETERA-PANAL-(CELESTE)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 19
+    },
+    {
+      "sku": "ORG-PARED-30CM",
+      "nombre": "",
+      "rack": "A",
+      "pos": "22",
+      "deposito": 10,
+      "picking": 9
+    },
+    {
+      "sku": "ORG-PARED-50CM",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 1
+    },
+    {
+      "sku": "BOX-BANO-(WHITE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "7",
+      "deposito": 24,
+      "picking": 22
+    },
+    {
+      "sku": "BOX-BANO-(LIGHTGREEN)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "7",
+      "deposito": 24,
+      "picking": 17
+    },
+    {
+      "sku": "PINZA-COCINA-S",
+      "nombre": "",
+      "rack": "A",
+      "pos": "1",
+      "deposito": 286,
+      "picking": 7
+    },
+    {
+      "sku": "PINZA-COCINA-M",
+      "nombre": "",
+      "rack": "A",
+      "pos": "1",
+      "deposito": 150,
+      "picking": 5
+    },
+    {
+      "sku": "PINZA-COCINA-L",
+      "nombre": "",
+      "rack": "A",
+      "pos": "1",
+      "deposito": 253,
+      "picking": 7
+    },
+    {
+      "sku": "CEPILLO-SILICONA-(BLUE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "2",
+      "deposito": 286,
+      "picking": 0
+    },
+    {
+      "sku": "CEPILLO-SILICONA-(PINK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "2",
+      "deposito": 283,
+      "picking": 5
+    },
+    {
+      "sku": "MOLDE-HIELO-6(PINK)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "MOLDE-HIELO-6(GREEN)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "HUEVA-TRES-PISO",
+      "nombre": "",
+      "rack": "B",
+      "pos": "4",
+      "deposito": 35,
+      "picking": 12
+    },
+    {
+      "sku": "CAJA-JABON-(WHITE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "3",
+      "deposito": 100,
+      "picking": 18
+    },
+    {
+      "sku": "CAJA-JABON-(GREEN)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "3",
+      "deposito": 176,
+      "picking": 12
+    },
+    {
+      "sku": "ATOMIZADOR-200ML(WHITE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 92,
+      "picking": 9
+    },
+    {
+      "sku": "ATOMIZADOR-200ML(BLACK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 60,
+      "picking": 8
+    },
+    {
+      "sku": "BOX-APILABLE-ORG",
+      "nombre": "",
+      "rack": "B",
+      "pos": "3",
+      "deposito": 10,
+      "picking": 4
+    },
+    {
+      "sku": "HUEVERA-BOX-(GREY)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "8",
+      "deposito": 20,
+      "picking": 3
+    },
+    {
+      "sku": "HUEVERA-BOX-(ORANGE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "8",
+      "deposito": 7,
+      "picking": 0
+    },
+    {
+      "sku": "HUEVERA-BOX-(WHITE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "8",
+      "deposito": 10,
+      "picking": 6
+    },
+    {
+      "sku": "PORTA-CEPILLO-(GREY)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 155,
+      "picking": 14
+    },
+    {
+      "sku": "PORTA-CEPILLO-(GREEN)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 189,
+      "picking": 3
+    },
+    {
+      "sku": "PORTA-CEPILLO-(WHITE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 180,
+      "picking": 11
+    },
+    {
+      "sku": "PORTA-CEPILLO-(PINK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "11",
+      "deposito": 179,
+      "picking": 8
+    },
+    {
+      "sku": "PORTA-JABON-(GREEN)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "8",
+      "deposito": 280,
+      "picking": 15
+    },
+    {
+      "sku": "PORTA-JABON-(GREY)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "8",
+      "deposito": 260,
+      "picking": 13
+    },
+    {
+      "sku": "160",
+      "nombre": "",
+      "rack": "A",
+      "pos": "2",
+      "deposito": 176,
+      "picking": 13
+    },
+    {
+      "sku": "DISPENSER-BOTELLA",
+      "nombre": "",
+      "rack": "C",
+      "pos": "18",
+      "deposito": 666,
+      "picking": 37
+    },
+    {
+      "sku": "ESTANTE-IMANTADO-BK",
+      "nombre": "",
+      "rack": "B",
+      "pos": "4",
+      "deposito": 120,
+      "picking": 10
+    },
+    {
+      "sku": "HIELERA-CIRCLE-(GREY)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "4",
+      "deposito": 145,
+      "picking": 6
+    },
+    {
+      "sku": "HIELERA-CIRCLE-(BLACK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "4",
+      "deposito": 80,
+      "picking": 5
+    },
+    {
+      "sku": "MOCHILA-CAMA-(GREY)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 3
+    },
+    {
+      "sku": "MOCHILA-CAMA-(DARKBLUE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "4",
+      "deposito": 28,
+      "picking": 5
+    },
+    {
+      "sku": "SET-COCINA-9P",
+      "nombre": "",
+      "rack": "B",
+      "pos": "3",
+      "deposito": 66,
+      "picking": 11
+    },
+    {
+      "sku": "SET-COCINA-9P",
+      "nombre": "",
+      "rack": "A",
+      "pos": "9",
+      "deposito": 46,
+      "picking": 0
+    },
+    {
+      "sku": "ALFOMBRA-ABSOR-(GRISCL)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "4",
+      "deposito": 79,
+      "picking": 1
+    },
+    {
+      "sku": "ALFOMBRA-ABSOR-(GRISOSC)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "4",
+      "deposito": 28,
+      "picking": 5
+    },
+    {
+      "sku": "BEBEDERO-MASCOTAS-METAL",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7",
+      "deposito": 51,
+      "picking": 3
+    },
+    {
+      "sku": "HAMACA-PARAGUAYA-(A)",
+      "nombre": "",
+      "rack": "C",
+      "pos": "7",
+      "deposito": 14,
+      "picking": 0
+    },
+    {
+      "sku": "CARRITO-BEBE-(GREEN)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 2
+    },
+    {
+      "sku": "CARRITO-BEBE-(GREY)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 3
+    },
+    {
+      "sku": "CARRITO-BEBE-(PINK)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "MESEDORA-BEBE-AUTO-(PINK)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 2
+    },
+    {
+      "sku": "MESEDORA-BEBE-AUTO-(BROWN)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "DISPENSER-CEREALES-WHITE",
+      "nombre": "",
+      "rack": "A",
+      "pos": "21",
+      "deposito": 34,
+      "picking": 0
+    },
+    {
+      "sku": "CANDADO-SOGA-VALIJA(GREEN&RED)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 188,
+      "picking": 7
+    },
+    {
+      "sku": "CANDADO-SOGA-VALIJA(ORANGE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 185,
+      "picking": 8
+    },
+    {
+      "sku": "CANDADO-SOGA-VALIJA(GREY)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 185,
+      "picking": 0
+    },
+    {
+      "sku": "SOGA-VALIJA(GREEN&RED)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 193,
+      "picking": 6
+    },
+    {
+      "sku": "SOGA-VALIJA(ORANGE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 193,
+      "picking": 5
+    },
+    {
+      "sku": "SOGA-VALIJA(GREY)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 190,
+      "picking": 4
+    },
+    {
+      "sku": "TABLA-MADERA-METAL",
+      "nombre": "",
+      "rack": "A",
+      "pos": "4",
+      "deposito": 90,
+      "picking": 5
+    },
+    {
+      "sku": "DISP-ROTATIVO-CER",
+      "nombre": "",
+      "rack": "A",
+      "pos": "14",
+      "deposito": 51,
+      "picking": 0
+    },
+    {
+      "sku": "KIT-ESPATULAS-BK",
+      "nombre": "",
+      "rack": "A",
+      "pos": "1",
+      "deposito": 231,
+      "picking": 27
+    },
+    {
+      "sku": "ORG-ALACENA-(WHITE)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "ORG-ALACENA-(BLACK)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "DESTAPADOR-IMAN-(BLACK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7",
+      "deposito": 170,
+      "picking": 5
+    },
+    {
+      "sku": "DESTAPADOR-IMAN-(SILVER)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7",
+      "deposito": 116,
+      "picking": 9
+    },
+    {
+      "sku": "HUEVERA-TRANSP-(CREAM)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "1",
+      "deposito": 45,
+      "picking": 10
+    },
+    {
+      "sku": "MANTA-PICNIC-(23)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 8
+    },
+    {
+      "sku": "MANTA-PICNIC-(4)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 6
+    },
+    {
+      "sku": "MANTA-PICNIC-(15)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 2
+    },
+    {
+      "sku": "MANTA-PICNIC-(24)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 7
+    },
+    {
+      "sku": "CARRITO-BEBE-3MODS(BLACK)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "7",
+      "deposito": 2,
+      "picking": 0
+    },
+    {
+      "sku": "CARRITO-BEBE-3MODS(GREY)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "16",
+      "deposito": 4,
+      "picking": 0
+    },
+    {
+      "sku": "CARRITO-BEBE-3MODS(KHAKI)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "12",
+      "deposito": 8,
+      "picking": 0
+    },
+    {
+      "sku": "MINI-TENDER-(BLACK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "1",
+      "deposito": 13,
+      "picking": 9
+    },
+    {
+      "sku": "MINI-TENDER-(WHITE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "1",
+      "deposito": 14,
+      "picking": 7
+    },
+    {
+      "sku": "ESCURRIDOR-ESPONJA-(GREEN)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "2",
+      "deposito": 159,
+      "picking": 16
+    },
+    {
+      "sku": "ESCURRIDOR-ESPONJA-(WHITE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "2",
+      "deposito": 105,
+      "picking": 3
+    },
+    {
+      "sku": "MINI-PLANCHA220V-(GREEN)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "MINI-PLANCHA220V-(WHITE)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 13
+    },
+    {
+      "sku": "SET-UTENSILLOS-METAL",
+      "nombre": "",
+      "rack": "A",
+      "pos": "6",
+      "deposito": 70,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-CLIP-GREEN",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-CLIP-WHITE",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-CLIP-GREY",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-CLIP-BLUE",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-CLIP-BLACK",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-INVERTIDO-(PINK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 31,
+      "picking": 0
+    },
+    {
+      "sku": "PARAGUAS-INVERTIDO-(BLUE)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 21,
+      "picking": 2
+    },
+    {
+      "sku": "PARAGUAS-INVERTIDO-(GREY)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 23
+    },
+    {
+      "sku": "SET-UTENSILLOS-MADERA",
+      "nombre": "",
+      "rack": "B",
+      "pos": "5",
+      "deposito": 80,
+      "picking": 0
+    },
+    {
+      "sku": "ORGANIZADOR-COCINA-(BLACK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "9",
+      "deposito": 48,
+      "picking": 16
+    },
+    {
+      "sku": "ORGANIZADOR-COCINA-(GREY)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "9",
+      "deposito": 16,
+      "picking": 10
+    },
+    {
+      "sku": "PORTA-JABON-TRANSP",
+      "nombre": "",
+      "rack": "A",
+      "pos": "22",
+      "deposito": 270,
+      "picking": 12
+    },
+    {
+      "sku": "CESTO-ROPA-30CM",
+      "nombre": "",
+      "rack": "C",
+      "pos": "20",
+      "deposito": 23,
+      "picking": 7
+    },
+    {
+      "sku": "CESTO-ROPA-50CM",
+      "nombre": "",
+      "rack": "C",
+      "pos": "20",
+      "deposito": 20,
+      "picking": 8
+    },
+    {
+      "sku": "CESTO-ROPA-61CM",
+      "nombre": "",
+      "rack": "C",
+      "pos": "20",
+      "deposito": 16,
+      "picking": 12
+    },
+    {
+      "sku": "CORREA-EXTENSIBLE(GREEN)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "3",
+      "deposito": 51,
+      "picking": 5
+    },
+    {
+      "sku": "CORREA-EXTENSIBLE(WHITE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "3",
+      "deposito": 60,
+      "picking": 6
+    },
+    {
+      "sku": "SAL-PIMENTERO-SET",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 13,
+      "picking": 4
+    },
+    {
+      "sku": "SET-METAL-X5",
+      "nombre": "",
+      "rack": "C",
+      "pos": "11",
+      "deposito": 60,
+      "picking": 5
+    },
+    {
+      "sku": "KIT-LUCH-(WHITE)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "KIT-LUCH-(GREY)",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 1
+    },
+    {
+      "sku": "SET-SILICONA-(BLACK)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 9,
+      "picking": 0
+    },
+    {
+      "sku": "SET-SILICONA-(KHAKI)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 13,
+      "picking": 3
+    },
+    {
+      "sku": "SET-SILICONA-(GREEN)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 5,
+      "picking": 4
+    },
+    {
+      "sku": "SET-SILICONA-(WHITE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 14,
+      "picking": 4
+    },
+    {
+      "sku": "SET-PARRILLA",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "MINI-ORGANIZADOR-METAL",
+      "nombre": "",
+      "rack": "D",
+      "pos": "1",
+      "deposito": 47,
+      "picking": 1
+    },
+    {
+      "sku": "FUENTE-WATER-PET",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 3
+    },
+    {
+      "sku": "TABLA-PLASTICO-METAL",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 3
+    },
+    {
+      "sku": "ESCOBILLA-DISP-BANO",
+      "nombre": "",
+      "rack": "C",
+      "pos": "11",
+      "deposito": 45,
+      "picking": 7
+    },
+    {
+      "sku": "ESP-CAPA-CUCHARA",
+      "nombre": "",
+      "rack": "A",
+      "pos": "22",
+      "deposito": 50,
+      "picking": 19
+    },
+    {
+      "sku": "VENT-SINASPAS-GREY",
+      "nombre": "",
+      "rack": "B",
+      "pos": "9",
+      "deposito": 11,
+      "picking": 0
+    },
+    {
+      "sku": "VENT-SINASPAS-WHITE",
+      "nombre": "",
+      "rack": "B",
+      "pos": "9",
+      "deposito": 16,
+      "picking": 2
+    },
+    {
+      "sku": "VENT-SIN-ASPAS",
+      "nombre": "",
+      "rack": "FONDO",
+      "pos": "2",
+      "deposito": 71,
+      "picking": 1
+    },
+    {
+      "sku": "LUZ-VENTILADOR-SINASPAS",
+      "nombre": "",
+      "rack": "A",
+      "pos": "24",
+      "deposito": 18,
+      "picking": 0
+    },
+    {
+      "sku": "GUANTES-CALENTADORES-BK",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 4
+    },
+    {
+      "sku": "BOTELLA-TERMICA-(WHITE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 19,
+      "picking": 2
+    },
+    {
+      "sku": "BOTELLA-TERMICA-(GREEN)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 18,
+      "picking": 6
+    },
+    {
+      "sku": "BOTELLA-TERMICA-(BLACK)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 14,
+      "picking": 5
+    },
+    {
+      "sku": "BOTELLA-TERMICA-(BEIGE)",
+      "nombre": "",
+      "rack": "B",
+      "pos": "11",
+      "deposito": 19,
+      "picking": 6
+    },
+    {
+      "sku": "DISP-ROTATIVO-(CREAM)",
+      "nombre": "",
+      "rack": "C",
+      "pos": "18",
+      "deposito": 24,
+      "picking": 15
+    },
+    {
+      "sku": "DISP-ROTATIVO-(WHITE)",
+      "nombre": "",
+      "rack": "C",
+      "pos": "9",
+      "deposito": 12,
+      "picking": 0
+    },
+    {
+      "sku": "RACK-ORGANIZADOR-BK",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "ESCURRIDOR-MESADA-(SILVER)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "6",
+      "deposito": 15,
+      "picking": 6
+    },
+    {
+      "sku": "ESCURRIDOR-MESADA-(BLACK)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "6",
+      "deposito": 12,
+      "picking": 6
+    },
+    {
+      "sku": "BOTELLA-SECRET-METAL",
+      "nombre": "",
+      "rack": "A",
+      "pos": "7",
+      "deposito": 114,
+      "picking": 17
+    },
+    {
+      "sku": "SET-FRASCOS-HERMETICOS",
+      "nombre": "",
+      "rack": "A",
+      "pos": "19",
+      "deposito": 72,
+      "picking": 8
+    },
+    {
+      "sku": "CAMA-ELASTICA-VERDE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "8",
+      "deposito": 5,
+      "picking": 0
+    },
+    {
+      "sku": "TERCERA IMPORTACION",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "SKU VARIANTE",
+      "nombre": "",
+      "rack": "RACK",
+      "pos": "POSICION",
+      "deposito": 0,
+      "picking": 0
+    },
+    {
+      "sku": "SILLA-OFICINA",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 4
+    },
+    {
+      "sku": "PAVA-ELÉCTRICA-AZUL",
+      "nombre": "",
+      "rack": "A",
+      "pos": "28",
+      "deposito": 90,
+      "picking": 20
+    },
+    {
+      "sku": "PAVA-ELÉCTRICA-BLANCO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 19
+    },
+    {
+      "sku": "GUANTES-SACAPELO-NEGRO",
+      "nombre": "",
+      "rack": "B",
+      "pos": "1",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "GUANTES-SACAPELO-NARANJA",
+      "nombre": "",
+      "rack": "B",
+      "pos": "1",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "ESCURRIDOR-COCINA-GRIS",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 100,
+      "picking": 10
+    },
+    {
+      "sku": "ESCURRIDOR-COCINA-NEGRO",
+      "nombre": "",
+      "rack": "B",
+      "pos": "4",
+      "deposito": 100,
+      "picking": 9
+    },
+    {
+      "sku": "ESCURRIDOR-COCINA-BLANCO",
+      "nombre": "",
+      "rack": "A",
+      "pos": "5",
+      "deposito": 100,
+      "picking": 10
+    },
+    {
+      "sku": "BOLSA-FIELTRO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 10
+    },
+    {
+      "sku": "ABRELATAS-NEGRO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 59
+    },
+    {
+      "sku": "SET-CUCHILLOS",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 29
+    },
+    {
+      "sku": "TAZA-DOBLE-FONDO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 430,
+      "picking": 40
+    },
+    {
+      "sku": "CUNA-PORTATIL",
+      "nombre": "",
+      "rack": "A",
+      "pos": "3",
+      "deposito": 20,
+      "picking": 44
+    },
+    {
+      "sku": "ESTATUA-BUDA",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "COOLER-BOX",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "TOST-220V-NEGRO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 12
+    },
+    {
+      "sku": "TOST-220V-BLANCO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 11
+    },
+    {
+      "sku": "CUNA-PLEGABLE",
+      "nombre": "",
+      "rack": "C",
+      "pos": "18",
+      "deposito": 24,
+      "picking": 0
+    },
+    {
+      "sku": "BOLSO-MATERNAL-AZUL",
+      "nombre": "",
+      "rack": "C",
+      "pos": "9",
+      "deposito": 40,
+      "picking": 9
+    },
+    {
+      "sku": "BOLSO-MATERNAL-ROSA",
+      "nombre": "",
+      "rack": "D",
+      "pos": "19",
+      "deposito": 40,
+      "picking": 10
+    },
+    {
+      "sku": "TOSTADORA-220V",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 11
+    },
+    {
+      "sku": "ALMOHADA-INTELIGEN-AZUL",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 11
+    },
+    {
+      "sku": "ESPEJO-CIRCLE-220V",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 6
+    },
+    {
+      "sku": "HERR-CHIMENEA",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 9
+    },
+    {
+      "sku": "COCHE-BEBE-MED-GRIS",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 4
+    },
+    {
+      "sku": "COCHE-BEBE-MED-KAKI",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 4
+    },
+    {
+      "sku": "MESA-PLEGABLE-METALXL",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "CUNA-PLEGAB-GRIS-OSCURO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 4
+    },
+    {
+      "sku": "CUNA-PLEGAB-GRIS-CLARO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 5
+    },
+    {
+      "sku": "SOFÁ-BLANCO",
+      "nombre": "",
+      "rack": "-",
+      "pos": "-",
+      "deposito": 0,
+      "picking": 1
+    },
+    {
+      "sku": "ALF-CUADRADA",
+      "nombre": "",
+      "rack": "C",
+      "pos": "5",
+      "deposito": 200,
+      "picking": 49
+    },
+    {
+      "sku": "ALF-BATH-MARMOL",
+      "nombre": "",
+      "rack": "C",
+      "pos": "5",
+      "deposito": 200,
+      "picking": 49
+    },
+    {
+      "sku": "BATIDORA-TURBO-220V (A)",
+      "nombre": "",
+      "rack": "A",
+      "pos": "25",
+      "deposito": 84,
+      "picking": 0
+    }
+  ],
+  "movimientos": [
+    {
+      "sku": "ORG-HAT-BLACK",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 110,
+      "signo": -1,
+      "hora": "21/5/2026 04:46 p. m."
+    },
+    {
+      "sku": "SET-SALERO- PIMENTERO- RED",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 4,
+      "signo": -1,
+      "hora": "21/5/2026 04:35 p. m."
+    },
+    {
+      "sku": "SET-SALERO- PIMENTERO- WHITE",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 3,
+      "signo": -1,
+      "hora": "21/5/2026 04:35 p. m."
+    },
+    {
+      "sku": "CALENTADOR-PLATOS-220V",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 6,
+      "signo": -1,
+      "hora": "21/5/2026 04:27 p. m."
+    },
+    {
+      "sku": "MESA-RATONA-MARBLE",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 1,
+      "signo": -1,
+      "hora": "21/5/2026 04:16 p. m."
+    },
+    {
+      "sku": "MESA-RATONA-BROWN",
+      "lugar": "deposito",
+      "accion": "INGRESO",
+      "cantidad": 4,
+      "signo": 1,
+      "hora": "21/5/2026 04:16 p. m."
+    },
+    {
+      "sku": "MESA-RATONA-BROWN",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 4,
+      "signo": -1,
+      "hora": "21/5/2026 04:16 p. m."
+    },
+    {
+      "sku": "BATIDORA-TURBO-220V",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 25,
+      "signo": -1,
+      "hora": "21/5/2026 04:13 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-PURPLE",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 15,
+      "signo": -1,
+      "hora": "21/5/2026 04:10 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-PINK",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 10,
+      "signo": -1,
+      "hora": "21/5/2026 04:09 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-PINK",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 5,
+      "signo": -1,
+      "hora": "21/5/2026 04:09 p. m."
+    },
+    {
+      "sku": "TAZA-DOBLE-VIDRIO",
+      "lugar": "deposito",
+      "accion": "INGRESO",
+      "cantidad": 5,
+      "signo": 1,
+      "hora": "21/5/2026 04:08 p. m."
+    },
+    {
+      "sku": "TAZA-DOBLE-VIDRIO",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 40,
+      "signo": -1,
+      "hora": "21/5/2026 04:08 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-GREEN",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 15,
+      "signo": -1,
+      "hora": "21/5/2026 04:07 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-BLUE",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 20,
+      "signo": -1,
+      "hora": "21/5/2026 04:07 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-RED",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 15,
+      "signo": -1,
+      "hora": "21/5/2026 04:06 p. m."
+    },
+    {
+      "sku": "TAZA-AUT-RED",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 15,
+      "signo": -1,
+      "hora": "21/5/2026 04:05 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-BLACK",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 10,
+      "signo": -1,
+      "hora": "21/5/2026 04:05 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-BLACK",
+      "lugar": "deposito",
+      "accion": "INGRESO",
+      "cantidad": 5,
+      "signo": 1,
+      "hora": "21/5/2026 04:05 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-BLACK",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 27,
+      "signo": -1,
+      "hora": "21/5/2026 04:04 p. m."
+    },
+    {
+      "sku": "TAZA-TERMICA-MED-WHITE",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 15,
+      "signo": -1,
+      "hora": "21/5/2026 04:02 p. m."
+    },
+    {
+      "sku": "TAZA-AUTOMATICA-GREY",
+      "lugar": "picking",
+      "accion": "EGRESO",
+      "cantidad": 90,
+      "signo": -1,
+      "hora": "21/5/2026 04:01 p. m."
+    },
+    {
+      "sku": "TAZA-AUTOMATICA-BROWN",
+      "lugar": "picking",
+      "accion": "EGRESO",
+      "cantidad": 6,
+      "signo": -1,
+      "hora": "21/5/2026 03:59 p. m."
+    },
+    {
+      "sku": "BATIDORA-TURBO-220V",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 2,
+      "signo": -1,
+      "hora": "21/5/2026 12:25 p. m."
+    },
+    {
+      "sku": "BATIDORA-TURBO-220V",
+      "lugar": "deposito",
+      "accion": "INGRESO",
+      "cantidad": 50,
+      "signo": 1,
+      "hora": "21/5/2026 12:19 p. m."
+    },
+    {
+      "sku": "BATIDORA-TURBO-220V",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 4,
+      "signo": -1,
+      "hora": "21/5/2026 12:00 p. m."
+    },
+    {
+      "sku": "BATIDORA-TURBO-220V",
+      "lugar": "deposito",
+      "accion": "EGRESO",
+      "cantidad": 50,
+      "signo": -1,
+      "hora": "21/5/2026 11:59 a. m."
+    }
+  ]
+}
