@@ -12,7 +12,7 @@
 <!-- ── HEADER ── -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand-name">OIO-<span>STOCK</span></div>
+    <div class="brand-name">DEPOSITO<span>😎</span></div>
     <div class="brand-line"></div>
     <div class="brand-tagline">Sistema de gestión de inventario</div>
     <div class="header-sub">Depósito + Picking — Control de stock en tiempo real</div>
@@ -64,10 +64,15 @@
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
   <input type="text" id="buscador" placeholder="Buscar SKU..." oninput="filtrar()">
 
-  <button class="btn-alerta" onclick="verStockBajo()">Stock bajo</button>
-  <button class="btn-limpiar" onclick="verTodos()">Ver todos</button>
+<button class="btn-alerta" onclick="verStockBajo()">Stock bajo</button>
+<button class="btn-limpiar" onclick="verTodos()">Ver todos</button>
 
-  <button class="btn-nuevo" onclick="abrirModalNuevo()">+ Nuevo producto</button>
+<label class="btn-importar">
+  Importar CSV
+  <input type="file" id="importar-csv" accept=".csv" onchange="importarCSV(event)">
+</label>
+
+<button class="btn-nuevo" onclick="abrirModalNuevo()">+ Nuevo producto</button>
 </div>
     </div>
     <table>

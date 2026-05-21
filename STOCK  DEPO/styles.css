@@ -912,3 +912,33 @@ tbody tr.fila-sin-stock:hover {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.35);
 }
+
+
+/* ── BOTÓN IMPORTAR CSV ───────────────────────── */
+
+.btn-importar {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.03em;
+  background: transparent;
+  color: var(--orange);
+  border: 1.5px solid rgba(255, 90, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-importar:hover {
+  background: rgba(255, 90, 0, 0.12);
+  box-shadow: 0 0 18px rgba(255, 90, 0, 0.2);
+}
+
+.btn-importar input {
+  display: none;
+}

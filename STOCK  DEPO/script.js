@@ -1,40 +1,32 @@
-const PRODUCTOS_INICIALES = [
-  { sku: "BATIDORA-TURBO-220V",   nombre: "", rack: "A", pos: "25",          deposito: 84,  picking: 4  },
-  { sku: "BATIDORA-TURBO-220V",   nombre: "", rack: "C", pos: "12",          deposito: 60,  picking: 0  },
-  { sku: "BOMBA-ELECTRICA-DISP",  nombre: "", rack: "A", pos: "6",           deposito: 129, picking: 3  },
-  { sku: "TAZA-AUTOMATICA-BROWN", nombre: "", rack: "-", pos: "-",           deposito: 0,   picking: 6  },
-  { sku: "TAZA-AUTOMATICA-GREY",  nombre: "", rack: "-", pos: "-",           deposito: 0,   picking: 90 },
-  { sku: "MESA-RATONA-WHITE",     nombre: "", rack: "C", pos: "13-14-15-16", deposito: 48,  picking: 0  },
-  { sku: "MESA-RATONA-BROWN",     nombre: "", rack: "C", pos: "8",           deposito: 4,   picking: 0  },
-  { sku: "MESA-RATONA-MARBLE",    nombre: "", rack: "C", pos: "10",          deposito: 7,   picking: 0  },
-  { sku: "BOTELLA-AGUA-PINK",     nombre: "", rack: "B", pos: "12",          deposito: 60,  picking: 4  },
-  { sku: "BOTELLA-AGUA-YELLOW",   nombre: "", rack: "B", pos: "12",          deposito: 73,  picking: 2  },
-  { sku: "BOT-WATER-FOOD-PINK",   nombre: "", rack: "A", pos: "12",          deposito: 40,  picking: 4  },
-  { sku: "BOT-WATER-FOOD-YELLOW", nombre: "", rack: "A", pos: "12",          deposito: 40,  picking: 4  },
-];
-
-function cargarDatos() {
-  const guardado = localStorage.getItem('stock_productos');
-  return guardado ? JSON.parse(guardado) : JSON.parse(JSON.stringify(PRODUCTOS_INICIALES));
-}
-
-function cargarMovimientos() {
-  const guardado = localStorage.getItem('stock_movimientos');
-  return guardado ? JSON.parse(guardado) : [];
-}
-
-function guardarDatos() {
-  localStorage.setItem('stock_productos', JSON.stringify(productos));
-  localStorage.setItem('stock_movimientos', JSON.stringify(movimientos));
-}
-
-let productos = cargarDatos();
-let movimientos = cargarMovimientos();
+let productos = [];
+let movimientos = [];
 let idxEditando = null;
 let filtroStockBajoActivo = false;
 
+// ── CARGAR DATOS DEL SERVIDOR ─────────────────────────────────────────
+async function cargarDesdeServidor() {
+  try {
+    const res = await fetch('/api/stock');
+    const data = await res.json();
+
+    productos = data.productos || [];
+    movimientos = data.movimientos || [];
+
+    cargarSelect(document.getElementById('buscador-movimiento')?.value || '');
+    renderTabla(document.getElementById('buscador')?.value || '');
+    renderMovimientos();
+
+  } catch (e) {
+    console.error('Error cargando datos:', e);
+    mostrarMsg('Error cargando datos del servidor.', false);
+  }
+}
+
+// ── SELECT DE PRODUCTOS ───────────────────────────────────────────────
 function cargarSelect(filtro = '') {
   const sel = document.getElementById('sel-sku');
+  if (!sel) return;
+
   const term = filtro.toLowerCase().trim();
 
   sel.innerHTML = '<option value="">— Seleccioná un SKU —</option>';
@@ -66,11 +58,7 @@ function cargarSelect(filtro = '') {
       ? `Rack ${p.rack} — Pos. ${p.pos}`
       : 'Sin ubicación';
 
-    sel.innerHTML += `
-      <option value="${p.idx}">
-        ${p.sku}${nombreTexto} [${ubicacion}]
-      </option>
-    `;
+    sel.innerHTML += `<option value="${p.idx}">${p.sku}${nombreTexto} [${ubicacion}]</option>`;
   });
 }
 
@@ -79,7 +67,8 @@ function filtrarSelectMovimiento() {
   cargarSelect(texto);
 }
 
-function mover(signo) {
+// ── MOVER STOCK ───────────────────────────────────────────────────────
+async function mover(signo) {
   const idx = parseInt(document.getElementById('sel-sku').value);
   const cantVal = parseInt(document.getElementById('cant-input').value);
   const lugar = document.querySelector('input[name="lugar"]:checked').value;
@@ -94,68 +83,42 @@ function mover(signo) {
     return;
   }
 
-  const p = productos[idx];
-  const campo = lugar === 'deposito' ? 'deposito' : 'picking';
-  const nuevoValor = p[campo] + (signo * cantVal);
+  try {
+    const res = await fetch('/api/movimiento', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ idx, lugar, signo, cantidad: cantVal })
+    });
 
-  if (nuevoValor < 0) {
-    mostrarMsg(`Stock insuficiente en ${lugar}. Hay ${p[campo]} unidades.`, false);
-    return;
+    const data = await res.json();
+
+    if (!res.ok) {
+      mostrarMsg(data.error || 'Error al registrar movimiento.', false);
+      return;
+    }
+
+    const sku = productos[idx]?.sku || 'producto';
+
+    mostrarMsg(
+      `${signo > 0 ? 'INGRESO' : 'EGRESO'}: ${cantVal} unidades de ${sku} en ${lugar}.`,
+      true
+    );
+
+    await cargarDesdeServidor();
+
+  } catch (e) {
+    console.error(e);
+    mostrarMsg('Error de conexión con el servidor.', false);
   }
-
-  p[campo] = nuevoValor;
-
-  const ahora = new Date();
-  const hora = ahora.toLocaleTimeString('es-AR', {
-    hour: '2-digit',
-    minute: '2-digit'
-  });
-  const fecha = ahora.toLocaleDateString('es-AR');
-
-  movimientos.unshift({
-    sku: p.sku,
-    lugar,
-    accion: signo > 0 ? 'INGRESO' : 'EGRESO',
-    cantidad: cantVal,
-    signo,
-    hora: `${fecha} ${hora}`
-  });
-
-  guardarDatos();
-
-  mostrarMsg(
-    `${signo > 0 ? 'INGRESO' : 'EGRESO'}: ${cantVal} unidades de ${p.sku} en ${lugar}.`,
-    true
-  );
-
-  renderTabla();
-  renderMovimientos();
-  cargarSelect(document.getElementById('buscador-movimiento')?.value || '');
 }
 
-function mostrarMsg(texto, ok) {
-  const msg = document.getElementById('msg');
-  msg.textContent = texto;
-  msg.className = 'msg ' + (ok ? 'ok' : 'error');
-
-  setTimeout(() => {
-    msg.className = 'msg';
-  }, 3000);
-}
-
-function mostrarMsgNuevo(texto, ok) {
-  const msg = document.getElementById('msg-nuevo');
-  msg.textContent = texto;
-  msg.className = 'msg ' + (ok ? 'ok' : 'error');
-
-  setTimeout(() => {
-    msg.className = 'msg';
-  }, 3000);
-}
-
+// ── MODAL EDITAR UBICACIÓN ────────────────────────────────────────────
 function abrirModal(idx) {
   idxEditando = idx;
+
   const p = productos[idx];
+
+  if (!p) return;
 
   document.getElementById('modal-sku-label').textContent = p.sku;
   document.getElementById('modal-rack').value = p.rack === '-' ? '' : p.rack;
@@ -169,23 +132,37 @@ function cerrarModal() {
   document.getElementById('modal-overlay').classList.remove('activo');
 }
 
-function guardarUbicacion() {
+async function guardarUbicacion() {
   if (idxEditando === null) return;
 
   const rack = document.getElementById('modal-rack').value.trim() || '-';
   const pos = document.getElementById('modal-pos').value.trim() || '-';
 
-  productos[idxEditando].rack = rack;
-  productos[idxEditando].pos = pos;
+  try {
+    const res = await fetch(`/api/producto/${idxEditando}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ rack, pos })
+    });
 
-  guardarDatos();
-  cargarSelect(document.getElementById('buscador-movimiento')?.value || '');
-  renderTabla();
-  cerrarModal();
+    const data = await res.json();
 
-  mostrarMsg('Ubicación actualizada correctamente.', true);
+    if (!res.ok) {
+      mostrarMsg(data.error || 'Error al guardar ubicación.', false);
+      return;
+    }
+
+    cerrarModal();
+    mostrarMsg('Ubicación actualizada correctamente.', true);
+    await cargarDesdeServidor();
+
+  } catch (e) {
+    console.error(e);
+    mostrarMsg('Error al guardar.', false);
+  }
 }
 
+// ── MODAL NUEVO PRODUCTO ──────────────────────────────────────────────
 function abrirModalNuevo() {
   document.getElementById('nuevo-sku').value = '';
   document.getElementById('nuevo-rack').value = '';
@@ -205,7 +182,7 @@ function cerrarModalNuevo() {
   document.getElementById('modal-nuevo-overlay').classList.remove('activo');
 }
 
-function guardarNuevoProducto() {
+async function guardarNuevoProducto() {
   const sku = document.getElementById('nuevo-sku').value.trim().toUpperCase();
   const rack = document.getElementById('nuevo-rack').value.trim() || '-';
   const pos = document.getElementById('nuevo-pos').value.trim() || '-';
@@ -217,39 +194,301 @@ function guardarNuevoProducto() {
     return;
   }
 
-  productos.push({
-    sku,
-    nombre: "",
-    rack,
-    pos,
-    deposito,
-    picking
-  });
+  try {
+    const res = await fetch('/api/producto', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sku, rack, pos, deposito, picking })
+    });
 
-  guardarDatos();
-  cargarSelect();
-  renderTabla();
-  cerrarModalNuevo();
+    const data = await res.json();
 
-  mostrarMsg(`Producto "${sku}" agregado correctamente.`, true);
+    if (!res.ok) {
+      mostrarMsgNuevo(data.error || 'Error al guardar producto.', false);
+      return;
+    }
+
+    cerrarModalNuevo();
+    mostrarMsg(`Producto "${sku}" agregado correctamente.`, true);
+    await cargarDesdeServidor();
+
+  } catch (e) {
+    console.error(e);
+    mostrarMsgNuevo('Error al guardar.', false);
+  }
 }
 
-function eliminarProducto(idx) {
+async function eliminarProducto(idx) {
   const p = productos[idx];
+
+  if (!p) return;
 
   if (!confirm(`¿Eliminar "${p.sku}"? Esta acción no se puede deshacer.`)) return;
 
-  productos.splice(idx, 1);
+  try {
+    const res = await fetch(`/api/producto/${idx}`, {
+      method: 'DELETE'
+    });
 
-  guardarDatos();
-  cargarSelect();
-  renderTabla();
+    const data = await res.json();
 
-  mostrarMsg('Producto eliminado.', true);
+    if (!res.ok) {
+      mostrarMsg(data.error || 'Error al eliminar producto.', false);
+      return;
+    }
+
+    mostrarMsg('Producto eliminado.', true);
+    await cargarDesdeServidor();
+
+  } catch (e) {
+    console.error(e);
+    mostrarMsg('Error al eliminar.', false);
+  }
 }
 
+// ── IMPORTAR CSV DESDE GOOGLE SHEETS ─────────────────────────────────
+
+// Detecta si el archivo viene separado por coma, punto y coma o tabulación
+function detectarSeparador(texto) {
+  const primerasLineas = texto.split(/\r?\n/).slice(0, 6).join('\n');
+
+  const cantidadComas = (primerasLineas.match(/,/g) || []).length;
+  const cantidadPuntoComa = (primerasLineas.match(/;/g) || []).length;
+  const cantidadTabs = (primerasLineas.match(/\t/g) || []).length;
+
+  if (cantidadPuntoComa >= cantidadComas && cantidadPuntoComa >= cantidadTabs) return ';';
+  if (cantidadTabs >= cantidadComas && cantidadTabs >= cantidadPuntoComa) return '\t';
+
+  return ',';
+}
+
+function parsearCSV(texto) {
+  const separador = detectarSeparador(texto);
+
+  console.log('Separador detectado:', separador === '\t' ? 'TAB' : separador);
+
+  const filas = [];
+  let fila = [];
+  let valor = '';
+  let dentroComillas = false;
+
+  for (let i = 0; i < texto.length; i++) {
+    const char = texto[i];
+    const siguiente = texto[i + 1];
+
+    if (char === '"' && dentroComillas && siguiente === '"') {
+      valor += '"';
+      i++;
+    } else if (char === '"') {
+      dentroComillas = !dentroComillas;
+    } else if (char === separador && !dentroComillas) {
+      fila.push(valor);
+      valor = '';
+    } else if ((char === '\n' || char === '\r') && !dentroComillas) {
+      if (valor || fila.length > 0) {
+        fila.push(valor);
+        filas.push(fila);
+        fila = [];
+        valor = '';
+      }
+
+      if (char === '\r' && siguiente === '\n') {
+        i++;
+      }
+    } else {
+      valor += char;
+    }
+  }
+
+  if (valor || fila.length > 0) {
+    fila.push(valor);
+    filas.push(fila);
+  }
+
+  return filas;
+}
+
+function normalizarHeader(texto) {
+  return String(texto || '')
+    .replace(/^\uFEFF/, '')
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+function normalizarNumero(valor) {
+  if (valor === undefined || valor === null) return 0;
+
+  const limpio = String(valor)
+    .trim()
+    .replace(/\./g, '')
+    .replace(',', '.');
+
+  return Number(limpio) || 0;
+}
+
+function buscarIndice(headers, opciones) {
+  for (const opcion of opciones) {
+    const index = headers.indexOf(opcion);
+    if (index !== -1) return index;
+  }
+
+  return -1;
+}
+
+async function importarCSV(event) {
+  const archivo = event.target.files[0];
+
+  if (!archivo) return;
+
+  const lector = new FileReader();
+
+  lector.onload = async function(e) {
+    try {
+      const contenido = e.target.result;
+
+      const filasOriginales = parsearCSV(contenido);
+
+      const filas = filasOriginales.filter(fila =>
+        fila.some(celda => String(celda).trim() !== '')
+      );
+
+      console.log('Primeras filas leídas:', filas.slice(0, 5));
+
+      if (filas.length < 2) {
+        mostrarMsg('El CSV está vacío o no tiene productos.', false);
+        event.target.value = '';
+        return;
+      }
+
+      let indiceHeader = -1;
+      let headers = [];
+
+      // Busca automáticamente la fila donde aparezca SKU
+      for (let i = 0; i < filas.length; i++) {
+        const posiblesHeaders = filas[i].map(normalizarHeader);
+
+        if (posiblesHeaders.includes('sku')) {
+          indiceHeader = i;
+          headers = posiblesHeaders;
+          break;
+        }
+      }
+
+      console.log('Fila de encabezados detectada:', indiceHeader);
+      console.log('Headers detectados:', headers);
+
+      if (indiceHeader === -1) {
+        mostrarMsg('No encontré la columna SKU. Revisá que el archivo sea CSV y que la fila tenga SKU.', false);
+        event.target.value = '';
+        return;
+      }
+
+      const idxSKU = buscarIndice(headers, ['sku']);
+      const idxNombre = buscarIndice(headers, ['nombre', 'producto', 'descripcion', 'detalle']);
+      const idxRack = buscarIndice(headers, ['rack']);
+      const idxPos = buscarIndice(headers, ['posicion', 'pos', 'ubicacion']);
+      const idxDeposito = buscarIndice(headers, ['deposito', 'stockdeposito', 'dep']);
+      const idxPicking = buscarIndice(headers, ['picking', 'stockpicking', 'pick']);
+
+      const nuevosProductos = filas.slice(indiceHeader + 1)
+        .map(fila => {
+          const sku = String(fila[idxSKU] || '').trim().toUpperCase();
+
+          if (!sku) return null;
+
+          return {
+            sku,
+            nombre: idxNombre !== -1 ? String(fila[idxNombre] || '').trim() : '',
+            rack: idxRack !== -1 ? String(fila[idxRack] || '-').trim() || '-' : '-',
+            pos: idxPos !== -1 ? String(fila[idxPos] || '-').trim() || '-' : '-',
+            deposito: idxDeposito !== -1 ? normalizarNumero(fila[idxDeposito]) : 0,
+            picking: idxPicking !== -1 ? normalizarNumero(fila[idxPicking]) : 0
+          };
+        })
+        .filter(Boolean);
+
+      console.log('Productos detectados:', nuevosProductos.slice(0, 5));
+
+      if (nuevosProductos.length === 0) {
+        mostrarMsg('Encontré SKU, pero no encontré productos válidos debajo.', false);
+        event.target.value = '';
+        return;
+      }
+
+      const confirmar = confirm(
+        `Se van a importar ${nuevosProductos.length} productos.\n\nEsto va a reemplazar la lista actual de productos.\n\n¿Querés continuar?`
+      );
+
+      if (!confirmar) {
+        event.target.value = '';
+        return;
+      }
+
+      const res = await fetch('/api/importar-csv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ productos: nuevosProductos })
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        mostrarMsg(data.error || 'Error al importar CSV.', false);
+        event.target.value = '';
+        return;
+      }
+
+      mostrarMsg(`Se importaron ${nuevosProductos.length} productos correctamente.`, true);
+
+      await cargarDesdeServidor();
+
+      event.target.value = '';
+
+    } catch (error) {
+      console.error(error);
+      mostrarMsg('Error al leer el CSV.', false);
+      event.target.value = '';
+    }
+  };
+
+  lector.readAsText(archivo, 'UTF-8');
+}
+
+// ── MENSAJES ──────────────────────────────────────────────────────────
+function mostrarMsg(texto, ok) {
+  const msg = document.getElementById('msg');
+
+  if (!msg) return;
+
+  msg.textContent = texto;
+  msg.className = 'msg ' + (ok ? 'ok' : 'error');
+
+  setTimeout(() => {
+    msg.className = 'msg';
+  }, 3000);
+}
+
+function mostrarMsgNuevo(texto, ok) {
+  const msg = document.getElementById('msg-nuevo');
+
+  if (!msg) return;
+
+  msg.textContent = texto;
+  msg.className = 'msg ' + (ok ? 'ok' : 'error');
+
+  setTimeout(() => {
+    msg.className = 'msg';
+  }, 3000);
+}
+
+// ── TABLA ─────────────────────────────────────────────────────────────
 function renderTabla(filtro = '') {
   const tbody = document.getElementById('tbody');
+  if (!tbody) return;
+
   const term = filtro.toLowerCase().trim();
 
   const lista = productos
@@ -292,13 +531,11 @@ function renderTabla(filtro = '') {
       ? 'cant cant-total cant-baja'
       : 'cant cant-total';
 
-    let claseFila = '';
-
-    if (total === 0) {
-      claseFila = 'fila-sin-stock';
-    } else if (total < 10) {
-      claseFila = 'fila-stock-bajo';
-    }
+    const claseFila = total === 0
+      ? 'fila-sin-stock'
+      : total < 10
+        ? 'fila-stock-bajo'
+        : '';
 
     return `
       <tr class="${claseFila}">
@@ -334,8 +571,10 @@ function verTodos() {
   renderTabla();
 }
 
+// ── MOVIMIENTOS ───────────────────────────────────────────────────────
 function renderMovimientos() {
   const lista = document.getElementById('lista-mov');
+  if (!lista) return;
 
   if (movimientos.length === 0) {
     lista.innerHTML = '<span class="sin-mov">Sin movimientos aún.</span>';
@@ -356,23 +595,24 @@ function renderMovimientos() {
   }).join('');
 }
 
+// ── INIT ──────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const modalEditar = document.getElementById('modal-overlay');
   const modalNuevo = document.getElementById('modal-nuevo-overlay');
 
   if (modalEditar) {
-    modalEditar.addEventListener('click', function(e) {
-      if (e.target === this) cerrarModal();
+    modalEditar.addEventListener('click', e => {
+      if (e.target === modalEditar) cerrarModal();
     });
   }
 
   if (modalNuevo) {
-    modalNuevo.addEventListener('click', function(e) {
-      if (e.target === this) cerrarModalNuevo();
+    modalNuevo.addEventListener('click', e => {
+      if (e.target === modalNuevo) cerrarModalNuevo();
     });
   }
 
-  cargarSelect();
-  renderTabla();
-  renderMovimientos();
+  cargarDesdeServidor();
+
+  setInterval(cargarDesdeServidor, 10000);
 });
